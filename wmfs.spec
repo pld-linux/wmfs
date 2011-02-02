@@ -10,6 +10,7 @@ URL:		http://wmfs.info/projects/wmfs/
 BuildRequires:	freetype-devel
 BuildRequires:	imlib2-devel
 BuildRequires:	pkg-config
+BuildRequires:	xorg-lib-libXft-devel
 BuildRequires:	xorg-lib-libXinerama-devel
 BuildRequires:	xorg-lib-libXrandr-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -39,7 +40,7 @@ export CFLAGS LDFLAGS
 	--prefix %{_prefix} \
 	--xdg-config-dir %{_sysconfdir}/xdg \
 	--man-prefix %{_mandir}
-	
+
 
 %{__make} \
 	CC="%{__cc}"
